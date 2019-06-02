@@ -1,0 +1,16 @@
+/**
+ * New query file
+ */
+query queryCoffee {
+  description: "get history on a particular coffee batch"
+  statement:
+      SELECT org.nidhin.coffee.Coffee
+  		  WHERE (batchId == _$batchId)
+}
+
+query getBatchHistory { 
+  description: "get all the participants" 
+  statement: 
+  		SELECT org.nidhin.coffee.transferCoffee
+  			WHERE (batchId == _$batchId ) 
+}
